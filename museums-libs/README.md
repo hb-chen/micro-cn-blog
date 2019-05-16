@@ -17,6 +17,9 @@
 - go mod
   - 翻墙代理 
     - https://github.com/goproxy/goproxy.cn
+- 性能调优
+  - golang pprof
+    - https://golang.org/pkg/net/http/pprof/
     
 ## 个人站点
 
