@@ -20,7 +20,9 @@
 - 性能调优
   - golang pprof
     - https://golang.org/pkg/net/http/pprof/
-    
+- k8s
+  - 玩具
+    - 线上玩k8s https://labs.play-with-k8s.com
 ## 个人站点
 
 - hhstore https://github.com/hhstore/blog
