@@ -1,6 +1,12 @@
-# 博物馆
-
-# 概览
+---
+layout: post
+title: 博物馆
+date:  2019-05-23 09:00:00
+profile: sx
+author: 舒先
+author_url: https://github.com/printfcoder
+author_bio: Senior Engineer@huize
+---
 
 收集Golang相关资料
 
@@ -23,6 +29,7 @@
 - k8s
   - 玩具
     - 线上玩k8s https://labs.play-with-k8s.com
+    
 ## 个人站点
 
 - hhstore https://github.com/hhstore/blog

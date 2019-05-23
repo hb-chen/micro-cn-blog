@@ -1,0 +1,17 @@
+name: Micro Blog
+description: 极简构建微服务
+meta_description: "微服务与micro相关资讯"
+
+markdown: kramdown
+highlighter: pygments
+logo: false
+paginate: 15
+baseurl: /blog/cn
+google_analytics: 'UA-XXXXXXXX-X'
+plugins: [jekyll-paginate, redcarpet, pygments.rb]
+future: true
+
+# Details for the RSS feed generator
+url:            'https://micro.mu/'
+author:         'Asim Aslam'
+author_url:    'https://twitter.com/chuhnk'
