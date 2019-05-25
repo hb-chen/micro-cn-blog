@@ -2,4 +2,4 @@
 
 ## 学习路径
 
-1. [什么是Go-Micro](./1-what-is-go-micro.md)
+1. [什么是Go-Micro](./2019-05-23-how-does-go-micro-server-be-bulit.md)
