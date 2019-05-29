@@ -264,7 +264,7 @@ func (s *service) Init(opts ...Option) {
     }
 
     s.once.Do(func() {
-        // Initialise the command flags, overriding new service
+        // 初始化命令行参数，会覆盖的参数
         _ = s.opts.Cmd.Init(
             cmd.Broker(&s.opts.Broker),
             cmd.Registry(&s.opts.Registry),
@@ -577,3 +577,10 @@ func (s *rpcServer) Start() error {
 
 1. [Go-Micro服务的构造过程](https://micro.mu/blog/cn/2019/05/23/how-does-go-micro-server-be-bulit.html)
 2. [Go-Micro注册解读(in progress)]
+
+## Micro 中文资源
+
+1. [中文示例集](https://github.com/micro-in-cn/all-in-one)
+2. [中文教程](https://github.com/micro-in-cn/tutorials)
+3. [中文博客](https://micro.mu/blog/cn)
+4. [Micro服务治理控制台](https://github.com/micro-in-cn/platform-web)
