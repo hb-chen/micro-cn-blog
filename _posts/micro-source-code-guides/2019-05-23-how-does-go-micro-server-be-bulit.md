@@ -66,8 +66,8 @@ func NewService(opts ...Option) Service {
 - [包装客户端](#2.包装客户端)
 - [组装服务](#3.组装服务)
 
-<a href="https://micro.mu/blog/cn/assets/images/go-micro-service.svg">
-  <img src="https://micro.mu/blog/cn/assets/images/go-micro-service.svg" style="width: 100%; height: auto; margin: 0;" />
+<a href="https://micro.mu/blog/cn/assets/images/go-micro-service.png">
+  <img src="https://micro.mu/blog/cn/assets/images/go-micro-service.png" style="width: 100%; height: auto; margin: 0;" />
 </a>
 
 参考上图，对2，3步骤可以有更好的理解。服务中有两个对象Client与Server，分别负责发送请求与接收请求。
