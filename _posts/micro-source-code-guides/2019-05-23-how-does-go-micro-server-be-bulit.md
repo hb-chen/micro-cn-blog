@@ -16,8 +16,8 @@ author_bio: Senior Engineer@huize
 
 首先，我们从**Go-Micro**的架构图开始，回顾一下：
 
-<a href="https://micru.mu/blog/cn/assets/images/go-micro.svg">
-  <img src="https://micru.mu/blog/cn/assets/images/go-micro.svg" style="width: 100%; height: auto; margin: 0;" />
+<a href="https://micro.mu/blog/cn/assets/images/go-micro.svg">
+  <img src="https://micro.mu/blog/cn/assets/images/go-micro.svg" style="width: 100%; height: auto; margin: 0;" />
 </a>
 
 如上图所示，**Go-Micro**由三层设计共5大模块组成。
@@ -66,8 +66,8 @@ func NewService(opts ...Option) Service {
 - [包装客户端](#2.包装客户端)
 - [组装服务](#3.组装服务)
 
-<a href="https://micru.mu/blog/cn/assets/images/go-micro-service.svg">
-  <img src="https://micru.mu/blog/cn/assets/images/go-micro-service.svg" style="width: 100%; height: auto; margin: 0;" />
+<a href="https://micro.mu/blog/cn/assets/images/go-micro-service.svg">
+  <img src="https://micro.mu/blog/cn/assets/images/go-micro-service.svg" style="width: 100%; height: auto; margin: 0;" />
 </a>
 
 参考上图，对2，3步骤可以有更好的理解。服务中有两个对象Client与Server，分别负责发送请求与接收请求。
