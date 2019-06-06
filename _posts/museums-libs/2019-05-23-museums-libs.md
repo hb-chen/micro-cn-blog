@@ -25,6 +25,7 @@ author_bio: Senior Engineer@huize
 - go mod
   - 翻墙代理 
     - [https://github.com/goproxy/goproxy.cn](https://github.com/goproxy/goproxy.cn)
+    - [https://goproxy.io/](https://goproxy.io/)
 - 性能调优
   - golang pprof
     - [https://golang.org/pkg/net/http/pprof/](https://golang.org/pkg/net/http/pprof)
@@ -33,5 +34,9 @@ author_bio: Senior Engineer@huize
     - 线上玩k8s [https://labs.play-with-k8s.com](https://labs.play-with-k8s.com)
     
 ## 个人站点
+
+replace github.com/testcontainers/testcontainer-go => github.com/testcontainers/testcontainers-go v0.0.0-20181115231424-8e868ca12c0f
+
+replace github.com/golang/lint => github.com/golang/lint v0.0.0-20190227174305-8f45f776aaf1
 
 - [hhstore](https://github.com/hhstore/blog)
