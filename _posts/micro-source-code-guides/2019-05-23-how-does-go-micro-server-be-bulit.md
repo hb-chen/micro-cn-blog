@@ -5,7 +5,7 @@ date:  2019-05-23 09:00:00
 profile: sx
 author: 舒先
 author_url: https://github.com/printfcoder
-author_bio: Senior Engineer@huize
+author_bio: maintainer of micro & overseeing micro China, senior engineer@huize
 ---
 
 在每一个技术领域，特别是微服务这一分支，**Go-Micro**尝试以最简单的方式帮助大家以最快的速度构建微服务。我们有比较详细但是仍需要大量持续更新、增进的文档，也有足够多的示例代码帮助大家验证每个功能点是否满足大家的业务需求。同时，我们在总结很多朋友的常询问的问题后，发现大家对**Go-Micro**的源码实现都很有兴趣。
