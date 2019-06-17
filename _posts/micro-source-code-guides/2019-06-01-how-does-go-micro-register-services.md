@@ -14,7 +14,7 @@ author_bio: maintainer of micro & overseeing micro China, senior engineer@huize
 
 [前面一章](/blog/cn/2019/05/23/how-does-go-micro-server-be-bulit.html)我们大体讲解了Go-Micro中的服务是如何构建的。接下来我们就从代码层面给大家演示服务注册。
 
-## 调用注册
+## 准备注册信息
 
 简单回顾下服务在**Start**时的动作：
 
@@ -40,6 +40,8 @@ func (s *rpcServer) Start() error {
 
 **Start()**方法在检测完信息后便进行注册动作，下面我们分析注册方法**Register**
 
+go-micro服务在注册时有两个关键点，元数据、自定义handler
+
 服务的向中心注册一般可以分为如下几个步骤：
 
 1.解析注册中心地址
@@ -50,9 +52,123 @@ func (s *rpcServer) Start() error {
 
 4.调用注册中心register
 
+```go
+func (s *rpcServer) Register() error {
+	// 解析注册中心地址
+	config := s.Options()
+	var advt, host string
+	var port int
 
+	// check the advertise address first
+	// if it exists then use it, otherwise
+	// use the address
+	if len(config.Advertise) > 0 {
+		advt = config.Advertise
+	} else {
+		advt = config.Address
+	}
 
-## 注册中心
+	parts := strings.Split(advt, ":")
+	if len(parts) > 1 {
+		host = strings.Join(parts[:len(parts)-1], ":")
+		port, _ = strconv.Atoi(parts[len(parts)-1])
+	} else {
+		host = parts[0]
+	}
+
+	addr, err := addr.Extract(host)
+	if err != nil {
+		return err
+	}
+
+	// 准备元数据
+	md := make(metadata.Metadata)
+	for k, v := range config.Metadata {
+		md[k] = v
+	}
+
+	// 声明节点信息
+	node := &registry.Node{
+		Id:       config.Name + "-" + config.Id,
+		Address:  addr,
+		Port:     port,
+		Metadata: md,
+	}
+
+	node.Metadata["transport"] = config.Transport.String()
+	node.Metadata["broker"] = config.Broker.String()
+	node.Metadata["server"] = s.String()
+	node.Metadata["registry"] = config.Registry.String()
+	node.Metadata["protocol"] = "mucp"
+
+	s.RLock()
+	// Maps are ordered randomly, sort the keys for consistency
+	var handlerList []string
+	for n, e := range s.handlers {
+		// Only advertise non internal handlers
+		if !e.Options().Internal {
+			handlerList = append(handlerList, n)
+		}
+	}
+	sort.Strings(handlerList)
+
+	var subscriberList []*subscriber
+	for e := range s.subscribers {
+		// Only advertise non internal subscribers
+		if !e.Options().Internal {
+			subscriberList = append(subscriberList, e)
+		}
+	}
+	sort.Slice(subscriberList, func(i, j int) bool {
+		return subscriberList[i].topic > subscriberList[j].topic
+	})
+
+	var endpoints []*registry.Endpoint
+	for _, n := range handlerList {
+		endpoints = append(endpoints, s.handlers[n].Endpoints()...)
+	}
+	for _, e := range subscriberList {
+		endpoints = append(endpoints, e.Endpoints()...)
+	}
+	s.RUnlock()
+
+	service := &registry.Service{
+		Name:      config.Name,
+		Version:   config.Version,
+		Nodes:     []*registry.Node{node},
+		Endpoints: endpoints,
+	}
+
+	s.Lock()
+	registered := s.registered
+	s.Unlock()
+
+	if !registered {
+		log.Logf("Registry [%s] Registering node: %s", config.Registry.String(), node.Id)
+	}
+
+	// create registry options
+	rOpts := []registry.RegisterOption{registry.RegisterTTL(config.RegisterTTL)}
+
+	if err := config.Registry.Register(service, rOpts...); err != nil {
+		return err
+	}
+
+	// already registered? don't need to register subscribers
+	if registered {
+		return nil
+	}
+
+	s.Lock()
+	defer s.Unlock()
+
+	s.registered = true
+
+	// 订阅，这里忽略
+}
+```
+
+## 自定义注册中心
 
 - 声明注册中心
 - 注册

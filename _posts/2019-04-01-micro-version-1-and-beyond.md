@@ -4,21 +4,15 @@ title:	Micro 1.0.0 release and beyond
 date:	2019-04-01 09:00:00
 ---
 <br>
-Over the past 4 years we've focused on creating the simplest experience for microservice development. To do this 
-we built a strongly opinionated open source framework called [**Go Micro**](https://github.com/micro/go-micro) and 
-[**Micro**](https://github.com/micro/micro), a microservice toolkit built to explore, query and 
-interact with those services via an API Gateway, CLI, Slack and Web Dashboard.
+在过去的四年里，我们花了大量精力简化微服务的开发。为了达到这个目标，我们推出了[**Go Micro**](https://github.com/micro/go-micro)框架及基于**Go Micro**的服务治理工具集[**Micro**](https://github.com/micro/micro)。
 
 <img src="https://micro.mu/docs/images/go-micro.svg" style="max-width: 100%; margin: 0;" />
 
-## Version 1.0.0
+## 版本 1.0.0
 
-Last month we released **version 1.0.0** of both of these tools. This signifies a huge moment for Micro and the community. We've been 
-running in production since 2015 and have become vital for companies like our sponsor Sixt, the german car rental enterprise, who are 
-running hundreds of microservices in production.
+上个月我们发布了**Go Micro**与**Micro****version 1.0.0**。在Micro发展历程中，这是非常重要的里程碑。从2015年开始，Micro就在很多公司中真实项目上运行，并且变得越来越重要，比如Micro的捐献商德国在线租车平台Sixt，它们产线上有几百个微服务。
 
-Micro enables teams to scale microservices development while abstracting away the complexity of distributed systems and cloud-native infrastructure. 
-It provides a pluggable and runtime agnostic architecture with sane zero dependency defaults.
+开发团队可以通过Micro将复杂的分布式与云端应用的抽象化，把它们构建成弹性的微服务。Micro插件化、对运行环境零依赖。
 
 <center>
 <img src="https://micro.mu/micro-diag.svg" style="max-width: 100%; margin: 0;" />
@@ -28,30 +22,25 @@ It provides a pluggable and runtime agnostic architecture with sane zero depende
 We've considered Micro production ready for a long time but the release of 1.0.0 solidifies the maturity and stability of our tooling. And 
 we believe it's the right time for everyone to adopt Micro as the defacto standard for microservice development.
 
-## Usage
+## 使用情况
 
-Micro has largely grown organically. We've not yet actively engaged in speaking at conferences, meetups or any other form of outreach. Instead 
+Micro在合理成长has largely grown organically. We've not yet actively engaged in speaking at conferences, meetups or any other form of outreach. Instead 
 we focused on solving a real problem and it's shown in the numbers.
 
 <center>
 <img src="{{ site.baseurl }}/assets/images/stars.png" style="max-width: 75%; margin: 0;" />
 </center>
 <br>
-It's difficult to track active usage of a library or framework but what's clear from all we can see is that Micro has really resonated with 
-the developer community who want a simpler path to adopting microservices with Go.
+跟踪大家的使用情况目前比较困难，但是我们通过在论坛中看到了大家的共呜与反馈，我们很清楚大家希望在Golang体系有一个更简单构建微服务的方式。
 
-## Beyond 1.0
+## 1.0之后的规则
 
-The announcement of version 1.0.0 is not just a marker for maturity and stability to run Micro in production but it also signals that this release version 
-will not suffer any further breaking API changes. This now also allows us to take stock of all the learnings of Micro's usage of the past 4 
+我们宣告1.0.0版本发布并不只是说发布稳定版、或者可以在产线中运行，也更意味着当前版本不会受未来变动API影响。This now also allows us to take stock of all the learnings of Micro's usage of the past 4 
 years, how technology has evolved in the industry and what version 2 might start to look like.
 
-When we started, kubernetes was just in it's infancy and gRPC had only recently been released. We're seeing these trends along with service mesh 
-and much more. 
+Micro刚启动的时候，k8s也只是才进入孵化期，而gRPC才发布不久。现在新的技术或者理念比如service-mesh等等又冒了出来。
 
-Because Micro is pluggable we've always been able to adapt to the changing needs of developers while continuing to provide 
-simpler abstractions on top for microservice development. With version 2.0 we have the ability to create an even more frictionless and streamlined
-experience.
+因为Micro是插件化的，更简化的顶层抽象，使得其比较容易面对开发者技术选型。2.0版本Micro会提供更多无缝集成和丝滑的体验。
 
 Some of these ideas will revolve around using gRPC by default, allowing a drop-in experience on kubernetes and potentially a runtime 
 for those who don't want to deal with the complexity of cloud-native systems or any dependency management at all.
@@ -69,10 +58,9 @@ We're going to work with the community by using GitHub to create an open source 
 To all those interested in contributing and collaboration, create an issue for feature requests, a pull request to share design ideas and we'll work 
 together to shape the roadmap.
 
-## Thanks
+## 鸣谢
 
-I want to finish by saying thank you to the Micro community and all who've used or supported us over the past 4 years. It's been a long hard 
-but incredibly rewarding journey with so much more left to do. Without the community Micro would not be where it is today. We're 1.6k+ members 
+我想在最后向Micro社区还有使用Micro、支持Micro的人们说声感谢，谢谢大家这4年来的支持。这段时间走得很艰难，不过好在困难都是值得的，而且我们还有很多事要做。没有社区就没有现在的Micro。 We're 1.6k+ members 
 strong in Slack with thousands more across other forums.
 
 <center>
@@ -85,8 +73,14 @@ place for all things microservices.
 
 <center>...</center>
 <br>
-Micro is the simplest way to build microservices. If you're thinking about microservice development we want to help enable you on that journey. 
-To learn more check out the [website](https://micro.mu), follow us on [twitter](https://twitter.com/microhq) or 
-join the [slack](https://micro-services.slack.com) community.
+Micro始终坚持极简构建微服务的理念。如果你也在想微服务开发，那就上车吧。
+
+访问我们的网站了解更多，[micro.mu](https://micro.mu)
+
+关注我们：[twitter](https://twitter.com/microhq)，[微博](https://weibo.com/microhq)
+
+讨论：[slack](https://micro-services.slack.com)
+
+线下：[meetup](https://www.meetup.com/Micro-Services-Network/)
 
 <h6><a href="https://github.com/micro/micro"><i class="fa fa-github fa-2x"></i> Micro</a></h6>
