@@ -7,8 +7,6 @@ translator_url: https://github.com/printfcoder
 translator_bio: maintainer of micro & overseeing micro China, senior engineer@huize
 ---
 
-<br>
-
 Micro生态以[**go-micro**](https://github.com/micro/go-micro)微服务开发框架为核心，已经开启她的微服务演近进程，Micro一直专注为微服务核心开发提供方案，通过Micro的抽象结构，大家在开发过程中不需要再关心微服务系统架构的复杂性。
 
 经过几年的时间演进，我们已经把Go-Micro扩展超过了原先的定位，发展出了其它工具、库、插件。这一过程在**虽然解决了问题**与**期望开发者如何（简便地）使用Micro工具链**之间产生了矛盾。所以我们现在正准备把这些工具库整合起来，给大家提供更好的使用体验。
