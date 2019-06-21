@@ -16,6 +16,7 @@ author_bio: Senior Engineer@huize
   - [https://github.com/avelino/awesome-go](https://github.com/avelino/awesome-go)
 - 标准
   - 项目结构 [https://github.com/golang-standards/project-layout](https://github.com/golang-standards/project-layout)
+  - 静态检查 [https://github.com/dominikh/go-tools](https://github.com/dominikh/go-tools)
 - failpoint错误注入
   - [https://github.com/pingcap/failpoint](https://github.com/pingcap/failpoint)
   - [https://github.com/etcd-io/gofail](https://github.com/etcd-io/gofail)
