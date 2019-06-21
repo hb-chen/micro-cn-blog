@@ -8,7 +8,7 @@ author_url: https://github.com/printfcoder
 author_bio: Senior Engineer@huize
 ---
 
-收集Golang相关资料
+我们为大家收集了Golang的相关资料，包含有检查、id生成、科学装包代理、调优秘笈、各种玩具等等，不限于Micro体系，旨在有个入口可以帮助大家查阅需要的资料，本博客会持续更新！
 
 ## 官方库
 
