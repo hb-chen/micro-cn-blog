@@ -120,7 +120,7 @@ func Name(n string) Option {
 }
 ```
 
-上述代码中接收服务名*n*后即返回一个回参为Option的匿名函数。函数中的**o.Server.Init(server.Name(n))**，我们这里不讲，大家只需要知道是服务的配置初始化逻辑，我们把它放到后面的专门讲解Server（MockServer，RpcServer，HttpServer）的章节里讲解。
+上述代码中接收服务名*n*后即返回一个回参为Option的匿名函数。函数中的**o.Server.Init(server.Name(n))**，我们这里不讲，大家只需要知道是服务的配置初始化逻辑，我们把它放到后面的专门讲解Server（包括：MockServer，RpcServer，HttpServer）的章节里讲解。
 
 更多选项配置函数参考：[options.go](https://github.com/micro/go-micro/blob/master/options.go)
 
