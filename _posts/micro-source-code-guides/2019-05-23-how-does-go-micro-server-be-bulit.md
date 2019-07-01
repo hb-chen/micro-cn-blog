@@ -576,7 +576,8 @@ func (s *rpcServer) Start() error {
 ## Micro源码系列
 
 1. [Go-Micro服务的构造过程](https://micro.mu/blog/cn/2019/05/23/how-does-go-micro-server-be-bulit.html)
-2. [Go-Micro注册解读(in progress)]
+2. [Go-Micro注册解读](https://micro.mu/blog/cn/2019/05/23/how-does-go-micro-register-services.html)
+3. [Go-Micro客户端解读（in progress）]
 
 ## Micro 中文资源
 

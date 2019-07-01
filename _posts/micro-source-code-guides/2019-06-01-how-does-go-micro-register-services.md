@@ -279,7 +279,7 @@ func (s *rpcServer) Start() error {
 
 ## TTL
 
-TTL与Register不同，它由注册组件执行，故而不同的注册中心组件有不同的实现。
+TTL与Register不同，它由注册组件执行，并非以服务直接调用。故而不同的注册中心组件有不同的实现。我们这里不深入讨论，后继如果有机会，我们再讨论每个中心的TTL机制。
 
 ## 卸载
 
@@ -327,7 +327,13 @@ func (s *rpcServer) Deregister() error {
 
 ## 总结
 
-我们在本篇中从源码的角度简单给大家介绍Go-Micro服务的注册流程，不过，我们并没有深入各自注册中心去详解，这也超过本文的范畴，会让文章变得很重，大家有兴趣可以去查看各注册中心的客户端代码。
+我们在本篇中从源码的角度简单给大家介绍Go-Micro服务的注册流程，不过，我们并没有深入各注册中心组件去详解，这也超过本文的范畴，会让文章变得很重，大家有兴趣可以去查看各注册中心的客户端代码。
+
+## Micro源码系列
+
+1. [Go-Micro服务的构造过程](https://micro.mu/blog/cn/2019/05/23/how-does-go-micro-server-be-bulit.html)
+2. [Go-Micro注册解读](https://micro.mu/blog/cn/2019/05/23/how-does-go-micro-register-services.html)
+3. [Go-Micro客户端解读（in progress）]
 
 ## 参考阅读
 
