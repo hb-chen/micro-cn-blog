@@ -15,9 +15,15 @@ author_bio: Senior Engineer@huize
 首先，我们进行功能上的对比
 
 |功能|Micro|Go-Kit|
-|---|:---:|:---:|
+|:---|:---:|:---:|
 |专门API Gateway|[有](https://micro.mu/docs/api.html)|[需手动实现](https://github.com/go-kit/kit/tree/master/examples/apigateway)|
 |负载均衡|支持|支持|
+|Pub/Sub|有，[broker](https://github.com/micro/go-micro/tree/master/broker)|无|
+|服务发现||
+|服务容错||
+|链路追踪||
+|多语言客户端||
+|中文团队||
 
 ## 分层设计
 
