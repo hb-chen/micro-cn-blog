@@ -33,6 +33,9 @@ author_bio: Senior Engineer@huize
 - k8s
   - 玩具
     - 线上玩k8s [https://labs.play-with-k8s.com](https://labs.play-with-k8s.com)
+- 数据库
+  - 时序
+    - 饿了么lindb [lindb](https://github.com/eleme/lindb)
     
 ## 个人站点
 
