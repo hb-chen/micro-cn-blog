@@ -19,11 +19,11 @@ author_bio: Senior Engineer@huize
 |专门API Gateway|[有](https://micro.mu/docs/api.html)|[需手动实现](https://github.com/go-kit/kit/tree/master/examples/apigateway)|
 |负载均衡|支持|支持|
 |Pub/Sub|有，[broker](https://github.com/micro/go-micro/tree/master/broker)|无|
-|服务发现||
+|服务发现|mdns、consul、etcd、zk、eureka等等|consul、etcd、zk、eureka等等
 |服务容错||
-|链路追踪||
-|多语言客户端||
-|中文团队||
+|链路追踪|Zipkin、Opentracing|Zipkin、Opentracing
+|多语言客户端|无|无
+|中文团队|有|
 
 ## 分层设计
 
@@ -31,13 +31,19 @@ author_bio: Senior Engineer@huize
 
 ### Go-kit
 
-Go-Kit虽然也由三层设计，但是它们并非MVC。
+Go-Kit虽然也由三层设计，但是它并非MVC。
 
 1. Transport layer
 2. Endpoint layer
 3. Service layer
 
-请求从第1层逐层往下到第三层，响应则是相反的路径
+请求从第1层逐层往下到第3层，响应则是相反的路径
+
+Go-kit服务架构如下所示：
+
+<p><a href="https://micro.mu/blog/cn/assets/images/go-kit-app-archi.png">
+  <img src="https://micro.mu/blog/cn/assets/images/go-kit-app-archi.png" style="width: 100%; height: auto; margin: 0;" />
+</a></p>
 
 ### Micro
 
@@ -47,14 +53,11 @@ Micro则相对复杂一些，大致见下图：
   <img src="https://micro.mu/blog/cn/assets/images/go-micro.svg" style="width: 100%; height: auto; margin: 0;" />
 </a></p>
 
-#### Go-Micro
-
-#### Micro
+Service通过由最下层的（逻辑上的设计）5个模块组成两个组件Client、Server请求或提供服务。
 
 ## 总结
 
 简而总之，Go-Kit从诞生到现在，更多是为了集成到应用平台之中，而Micro则是一个平台，二者适应的场景不同。
-
 
 ## 参考资料
 
