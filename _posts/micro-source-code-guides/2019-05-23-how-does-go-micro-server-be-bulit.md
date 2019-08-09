@@ -239,7 +239,7 @@ func (c *clientWrapper) setHeaders(ctx context.Context) context.Context {
 
 #### 3.组装服务
 
-**Go-Micro**中的server非常简单
+**Go-Micro**中的service非常简单
 
 ```go
 type service struct {
@@ -582,7 +582,7 @@ func (s *rpcServer) Start() error {
 
 ## Micro 中文资源
 
-1. [中文示例集](https://github.com/micro-in-cn/all-in-one)
+1. [中文示例集](https://github.com/micro-in-cn/tutorials/examples)
 2. [中文教程](https://github.com/micro-in-cn/tutorials)
 3. [中文博客](https://micro.mu/blog/cn)
 4. [Micro服务治理控制台](https://github.com/micro-in-cn/platform-web)
