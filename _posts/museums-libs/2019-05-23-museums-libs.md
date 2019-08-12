@@ -36,6 +36,8 @@ author_bio: Senior Engineer@huize
 - 数据库
   - 时序
     - 饿了么lindb [lindb](https://github.com/eleme/lindb)
+  - 分布式事务
+    - 阿里seata [seata](https://github.com/seata/seata)
     
 ## 个人站点
 
