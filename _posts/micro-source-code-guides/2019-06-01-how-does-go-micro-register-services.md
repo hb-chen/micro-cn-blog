@@ -5,7 +5,7 @@ date:  2019-06-01 09:00:00
 profile: sx
 author: 舒先
 author_url: https://github.com/printfcoder
-author_bio: maintainer of micro & overseeing micro China, senior engineer@huize
+author_bio: maintainer of micro & overseeing micro China, senior engineer@oppo
 ---
 
 微服务架构中注册是非常有意思的角色，服务中的客户端通过注册机制定位目标服务的具体位置。服务注册中心可以说是服务实例的数据库，在里面有服务的各种信息，包括位置等。服务实例在启动时通过注册机制**注册**到中心，并且在关闭前从中心自动**卸载**。不过光有**注册**与**卸载**两个步骤还不够，在两者之间，我们还需要**健康检查**来确定服务是否可以持续接收请求。

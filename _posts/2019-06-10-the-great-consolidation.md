@@ -4,7 +4,7 @@ title: 2019年Micro的整合工作
 date:  2019-06-01 09:00:00
 translator: 舒先
 translator_url: https://github.com/printfcoder
-translator_bio: maintainer of micro & overseeing micro China, senior engineer@huize
+translator_bio: maintainer of micro & overseeing micro China, senior engineer@oppo
 ---
 
 Micro生态以[**go-micro**](https://github.com/micro/go-micro)微服务开发框架为核心，已经开启她的微服务演近进程，Micro一直专注为微服务核心开发提供方案，通过Micro的抽象结构，大家在开发过程中不需要再关心微服务系统架构的复杂性。
