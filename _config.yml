@@ -6,7 +6,7 @@ markdown: kramdown
 highlighter: pygments
 logo: false
 paginate: 15
-baseurl: /blog
+baseurl: /blog/cn
 google_analytics: 'UA-XXXXXXXX-X'
 gems: [jekyll-paginate, redcarpet, jekyll-gist, pygments.rb]
 future: true
