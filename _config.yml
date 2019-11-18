@@ -6,12 +6,12 @@ markdown: kramdown
 highlighter: pygments
 logo: false
 paginate: 15
-baseurl: /blog/cn
+baseurl: /blog
 google_analytics: 'UA-XXXXXXXX-X'
-plugins: [jekyll-paginate, redcarpet, pygments.rb]
+gems: [jekyll-paginate, redcarpet, jekyll-gist, pygments.rb]
 future: true
 
 # Details for the RSS feed generator
 url:            'https://micro.mu/'
 author:         'Asim Aslam'
-author_url:    'https://twitter.com/chuhnk'
+author_url:	'https://twitter.com/chuhnk'
