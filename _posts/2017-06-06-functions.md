@@ -1,7 +1,11 @@
 ---
 layout: post
-title: Micro中的函数式编程(Function)
-date:  2019-11-19 23:26:00
+title: Micro中函数式编程(Function)
+date:   2017-06-06 09:00:00	date:  2019-11-19 23:26:00
+profile: crazybber
+author: Edward
+author_url: https://github.com/crazybber
+author_bio: maintainer of micro & micro china
 ---
 <br>
 随着技术的发展，我们的编程模型也在发展，我们已经从单体式服务转向微服务
