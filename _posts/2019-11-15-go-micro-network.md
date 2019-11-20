@@ -2,9 +2,9 @@
 layout: post
 title: Network初探
 date:  2019-11-16 07:03:09
-translator: 陈洪波
-translator_url: https://github.com/hb-chen
-translator_bio: Micro中国站成员，专注于微服务架构与服务网格的应用
+author: 陈洪波
+author_url: https://github.com/hb-chen
+author_bio: Micro中国站成员，专注于微服务架构与服务网格的应用
 ---
 Network是micro社区正在主力打造的解决多"云"环境的解决方案，下面结合最近的研究做个总结，主要包括`network`适用的几种场景分析，
 以及在这些场景需求下`network`还有哪些不足。
