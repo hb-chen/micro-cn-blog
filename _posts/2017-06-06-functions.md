@@ -1,91 +1,81 @@
 ---
 layout: post
-title: Functions with Micro
-date:   2017-06-06 09:00:00
+title: Micro中的函数式编程(Function)
+date:  2019-11-19 23:26:00
+profile: cb
+author: crazybber
+author_url: https://github.com/crazybber
+author_bio: maintainer of micro china & micro open community
 ---
 <br>
-As technology evolves so do our programming models. We've gone from monoliths to microservices 
-and more recently started to push this separation even further towards functions.
+随着技术的发展，我们的编程模型也在发展，我们已经从单体式服务转向微服务
+并且，最近开始将这种分离，更进一步推向函数式编程。
 
-Micro looks to simplify distributed systems development, with [go-micro](https://github.com/micro/go-micro) 
-providing a pluggable framework for microservices. Go-micro has historically included a high level [Service](https://godoc.org/github.com/micro/go-micro#Service) 
-interface, encapsulating the lower level requirements for microservices. 
+Micro希望通过[go-micro](https://github.com/micro/go-micro)为微服务提供可插拔的框架来简化分布式系统的开发，并且Go-micro历来包括高级[Service](https://godoc.org/github.com/micro/go-micro#Service)
+接口，封装了对微服务更偏底层的要求。
 
-Today we're introducing the [Function](https://godoc.org/github.com/micro/go-micro#Function) 
-interface, a one time executing Service.
+现在，我们将介绍在Go-Micro中执行一次Service 的函数功能[Function](https://godoc.org/github.com/micro/go-micro#Function)实现。
 
 <script src="https://gist.github.com/asim/bfbaf036c90761879dbf6e939e5172e4.js"></script>
 
-### The Inspiration
+### 灵感
 
-Ben Firshman open sourced a project last year called [Funker](https://github.com/bfirsh/funker), functions as docker containers. The concept is very 
-simple but also extremely clever. 
+Ben Firshman去年开源了一个名为[Funker](https://github.com/bfirsh/funker)的项目:函数(Function)即容器，这个概念非常简单但也非常聪明。
 
-Functions could quite simply be programs with one method, listening on the network for a request and exiting after 
-executing once, leveraging docker swarm services for lifecycle management, discovery, etc.
+函数(Function)可以很简单地成为一种方法的程序，可以在网络上侦听请求并在执行一次后退出，可以利用kubernetes、docker swarm服务进行生命周期管理，发现等。
 
-This sparked the inspiration for including functions as part of go-micro.
+这激发了我们将函数(Function)纳入go-micro的灵感。
 
-### Why Functions?
+### 为什么需要函数式编程
 
-The function programming model is the evolution of microservices. As our scale requirements increase both technically and organisationally 
-there's a need to decouple systems and teams so they can operate independently.
+函数编程模型是微服务的进一步发展，随着我们需求规模的增加，无论是在技术上还是组织上，我们都需要使系统和团队解耦，以便他们可以分别独立运行。
 
-In the past 5 years we've seen the emergence of microservices as a way of dealing with those scaling requirements. The microservices 
-architecture pattern is of course nothing new but we've now started to define best practices which help us build better software. 
+在过去的五年中，我们已经看到微服务作为满足这些扩展需求的一种方式而出现。微服务架构模式当然并不是什么新鲜事物，但是我们现在已经开始定义最佳实践，以帮助我们构建更好的软件。
 
-Functions push us into a new realm of possibility in terms of simplifying distributed systems development and solving software problems. 
-Going back to the unix philosophy, "do one thing and do it well", functions truly embody that philosophy even more so than microservices.
+在简化分布式系统开发和解决软件问题方面，函数编程使我们进入了一个新的可能性领域。
+回到unix的哲学理念:“做一件事情，做事情做好”，相比于微服务，函数式编程，更能体现了这一哲学理念。
 
-While infrastructure helps us build scalable systems, remember that microservices and functions are software architecture patterns 
-and programming models, so with that we need tools which help us to write software using those patterns.
+虽然基础架构可以帮助我们构建可扩展的系统，但需要知道，微服务和函数式编程是软件体系结构模式和编程模型，因此，我们需要能够帮助我们使用这些模式编写软件的工具。
 
-### Example Function
+### 函数式编程示例
 
-Here's a straight forward example of writing a function with go-micro. 
+这是使用go-micro编写函数的简单示例。
 
-As you can tell it looks almost identical to a service definition. That's because underneath the covers they are exactly the 
-same except for one small detail, functions exit after one execution of a handler or subscriber.
+如您所知，它看起来几乎与服务定义相同。那是因为除了一个小细节，它们的底下是完全相同的，函数在执行处理程序或订阅程序后退出。
 
-Functions give you the same functionality as services, letting you leverage all the existing micro ecosystem tooling.
+功能为您提供与服务相同的功能，从而使您可以利用所有现有的微生态系统工具。
 
 <script src="https://gist.github.com/asim/7d70cf1160ad1279597f12985fe3fbd5.js"></script>
 
-### Running Functions
+### 运行函数
 
-As previously stated, functions in micro are one time executing services, the function will exit after completing a request. This then 
-poses the question, how do we keep functions running?
+如前所述，micro中的功能是一次执行服务，该功能将在完成请求后退出,这里提出了一个问题，我们如何保持函数服务端持续运行?
 
-There is an abundance of existing tooling out there for process lifecycle management, so feel free to use any of your favourite 
-process managers.
+开源社区中有大量用于流程生命周期管理的现有工具，因此可以随意使用任何您喜欢的工具流程管理工具。
 
-However the micro toolkit now includes a convenience tool called [**micro run**](https://micro.mu/docs/run.html).
+但是，微型工具包现在包含一个名为[**micro run**](https://micro.mu/docs/run.html)的便捷工具。
 
-Here's how to run a function:
+这是运行函数的方法：
 
-```
+```bash
 micro run -r github.com/micro/examples/function
 ```
 
-The **micro run** command fetches, builds and executes from source. The `-r` flag tells it restart the function on exit. 
-It's currently a simple and experimental tool for running micro based microservices and functions. From source to running in one command.
+** micro run ** 命令可从源获取，构建和执行。 -r标志告诉它在退出时重新启动功能。
+目前，它是用于运行基于微服务的Service和Function的简单实验工具。从源代码到在一个命令中运行。
 
-There will be a separate post for the run command once it's more stable.
+等该功能更加稳定后，我们将为run命令，发布个专题文章。
 
-### Summary
+### 总结
 
-Functions are a natural extension of microservices as the next programming model to help simplify distributed systems development. 
-Micro treats functions as a first class citizen.
+函数式编程是微服务的自然扩展，是帮助简化分布式系统开发的下一个编程模型，Micro将函数(Function)视为头等公民。
 
-While functions have been added to go-micro, it does not mean 100% of your software needs to be written with them. It's important 
-to understand when monoliths, microservices or functions are appropriate.
+虽然函数已添加到go-micro中，但这并不意味着您必须使用它们编写100％的软件，重要的是要了解应用场景，搞清楚什么时候应该使用，单体服务、微服务或函数。
+希望在不久的将来，我们能看到更多有关微服务下的函数式编程与现有系统和Serverless工具集成的信息。
 
-Look to see more on integrating micro functions with existing systems and serverless tooling in the near future.
+<center> <p> ... </p> </center>
 
-<center><p>...</p></center>
-If you want to learn more about the services we offer or microservices, checkout the [website](https://micro.mu) or 
-visit [GitHub](https://github.com/micro/micro).
+如果您想了解有关我们提供的服务或微服务的更多信息，请访问[网站](https://micro.mu/blog/cn)或
+请访问[GitHub](https://github.com/micro/micro-in-cn)。
 
-Follow us on [Twitter](https://twitter.com/microhq) or join the [Slack](http://slack.micro.mu) community.
-
-
+在[Twitter](https://twitter.com/microhq)上关注我们，或加入[Slack](http://slack.micro.mu)社区的中文频道。

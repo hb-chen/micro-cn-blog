@@ -61,7 +61,7 @@ type Registry interface {
 
 ## 声明注册中心
 
-我们知道Go-Micro可以通过命令行参数--**registry**或者方法参数**micro.Registry**来指定服务注册中心，但是**Register**方法中并没有选择注册中心的过程，我们看下Go-Micro在构建服务时的动作：
+我们知道Go-Micro可以通过命令行参数 **--registry**或者方法参数**micro.Registry**来指定服务注册中心，但是**Register**方法中并没有选择注册中心的过程，我们看下Go-Micro在构建服务时的动作：
 
 命令行参数：
 
