@@ -9,6 +9,7 @@ author_bio: maintainer of micro & micro china
 ---
 
 <br>
+
 随着技术的发展，我们的编程模型也在发展，我们已经从单体式服务转向微服务
 并且，最近开始将这种分离，更进一步推向函数式编程。
 
@@ -16,7 +17,7 @@ Micro希望通过[go-micro](https://github.com/micro/go-micro)为微服务提供
 接口，封装了对微服务更偏底层要求。
 
 现在，我们将介绍在Go-Micro中执行一次Service 的函数功能[Function]（https://godoc.org/github.com/micro/go-micro#Function)实现。
-<script src =“ https://gist.github.com/asim/bfbaf036c90761879dbf6e939e5172e4.js”> </ script>
+<script src="https://gist.github.com/asim/bfbaf036c90761879dbf6e939e5172e4.js"> </script>
 灵感
 
 Ben Firshman去年开源了一个名为[Funker](https://github.com/bfirsh/funker)的项目:函数(Function)即容器，这个概念非常简单但也非常聪明。
@@ -45,7 +46,7 @@ Ben Firshman去年开源了一个名为[Funker](https://github.com/bfirsh/funker
 
 功能为您提供与服务相同的功能，从而使您可以利用所有现有的微生态系统工具。
 
-<script src =“ https://gist.github.com/asim/7d70cf1160ad1279597f12985fe3fbd5.js”> </ script>
+<script src="https://gist.github.com/asim/7d70cf1160ad1279597f12985fe3fbd5.js"> </script>
 
 ### 运行函数
 
@@ -58,11 +59,11 @@ Ben Firshman去年开源了一个名为[Funker](https://github.com/bfirsh/funker
 
 这是运行函数的方法：
 
-```
+```bash
 micro run -r github.com/micro/examples/function
 ```
 
-** micro run **命令可从源获取，构建和执行。 -r标志告诉它在退出时重新启动功能。
+** micro run ** 命令可从源获取，构建和执行。 -r标志告诉它在退出时重新启动功能。
 目前，它是用于运行基于微服务的Service和Function的简单实验工具。从源代码到在一个命令中运行。
 
 等该功能更加稳定后，我们将为run命令，发布个专题文章。
@@ -75,6 +76,7 @@ micro run -r github.com/micro/examples/function
 希望在不久的将来，我们能看到更多有关微服务下的函数式编程与现有系统和Serverless工具集成的信息。
 
 <center> <p> ... </ p> </ center>
+
 如果您想了解有关我们提供的服务或微服务的更多信息，请访问[网站]（https://micro.mu/blog/cn）或
 请访问[GitHub]（https://github.com/micro/micro-in-cn）。
 
