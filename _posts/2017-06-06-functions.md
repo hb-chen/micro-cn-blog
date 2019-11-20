@@ -12,7 +12,7 @@ author_bio: maintainer of micro china & micro open community
 并且，最近开始将这种分离，更进一步推向函数式编程。
 
 Micro希望通过[go-micro](https://github.com/micro/go-micro)为微服务提供可插拔的框架来简化分布式系统的开发，并且Go-micro历来包括高级[Service](https://godoc.org/github.com/micro/go-micro#Service)
-接口，封装了对微服务更偏底层要求。
+接口，封装了对微服务更偏底层的要求。
 
 现在，我们将介绍在Go-Micro中执行一次Service 的函数功能[Function](https://godoc.org/github.com/micro/go-micro#Function)实现。
 
@@ -53,7 +53,7 @@ Ben Firshman去年开源了一个名为[Funker](https://github.com/bfirsh/funker
 
 开源社区中有大量用于流程生命周期管理的现有工具，因此可以随意使用任何您喜欢的工具流程管理工具。
 
-但是，微型工具包现在包含一个名为[** micro run **](https://micro.mu/docs/run.html)的便捷工具。
+但是，微型工具包现在包含一个名为[**micro run**](https://micro.mu/docs/run.html)的便捷工具。
 
 这是运行函数的方法：
 
