@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Micro中函数式编程(Function)
+title: Micro中的函数式编程(Function)
 date:  2019-11-19 23:26:00
 ---
 <br>
