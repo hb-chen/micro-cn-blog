@@ -3,16 +3,14 @@ layout: post
 title: Micro中的函数式编程(Function)
 date:  2019-11-19 23:26:00
 profile: cb
-author: crazybber
+author: Edward
 author_url: https://github.com/crazybber
 author_bio: maintainer of micro china & micro open community
 ---
 <br>
-随着技术的发展，我们的编程模型也在发展，我们已经从单体式服务转向微服务
-并且，最近开始将这种分离，更进一步推向函数式编程。
+随着技术的发展，我们的编程模型也在发展，我们已经从单体式服务转向微服务，并且，最近开始将这种分离，更进一步推向函数式编程。
 
-Micro希望通过[go-micro](https://github.com/micro/go-micro)为微服务提供可插拔的框架来简化分布式系统的开发，并且Go-micro历来包括高级[Service](https://godoc.org/github.com/micro/go-micro#Service)
-接口，封装了对微服务更偏底层的要求。
+Micro希望通过[go-micro](https://github.com/micro/go-micro)为微服务提供可插拔的框架来简化分布式系统的开发，并且Go-micro历来包括高级[Service](https://godoc.org/github.com/micro/go-micro#Service)接口，封装了对微服务更偏底层的要求。
 
 现在，我们将介绍在Go-Micro中执行一次Service 的函数功能[Function](https://godoc.org/github.com/micro/go-micro#Function)实现。
 
@@ -75,7 +73,6 @@ micro run -r github.com/micro/examples/function
 
 <center> <p> ... </p> </center>
 
-如果您想了解有关我们提供的服务或微服务的更多信息，请访问[网站](https://micro.mu/blog/cn)或
-请访问[GitHub](https://github.com/micro/micro-in-cn)。
+如果您想了解有关我们提供的服务或微服务的更多信息，请访问[网站](https://micro.mu/blog/cn)或请访问[GitHub](https://github.com/micro/micro-in-cn)。
 
 在[Twitter](https://twitter.com/microhq)上关注我们，或加入[Slack](http://slack.micro.mu)社区的中文频道。
