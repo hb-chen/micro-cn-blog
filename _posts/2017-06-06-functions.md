@@ -2,8 +2,8 @@
 layout: post
 title: Micro中函数式编程(Function)
 date:  2019-11-19 23:26:00
-profile: crazybber
-author: Edward
+profile: cb
+author: crazybber
 author_url: https://github.com/crazybber
 author_bio: maintainer of micro & micro china
 ---
